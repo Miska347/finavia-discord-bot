@@ -291,13 +291,17 @@ async def send_flight_data():
         await channel.send(embed=embed)
     else:
         print("Could not send data because API request failed or no data found. Sending error message")
-        # Send a message as a private message
-        user = await client.fetch_user(your_discord_id)
-        await user.send(message_no_data)
+        if not notify_no_new: # No data found message, don't send anything (config notify_no_new set false)
+            return
+        else: # No data found message, send message (config notify_no_new set true)
+            # Send a message as a private message
+            user = await client.fetch_user(your_discord_id)
+            await user.send(message_no_data)
 
-        # Get the channel and send the message to the channel
-        channel = client.get_channel(your_channel_id)
-        await channel.send(message_no_data)
+            # Get the channel and send the message to the channel
+            channel = client.get_channel(your_channel_id)
+            await channel.send(message_no_data)
+
 
 
 
