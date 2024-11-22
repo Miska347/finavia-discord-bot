@@ -25,7 +25,7 @@ Uses Finavia Public Flights, V0 API
 
 - Clone/Download the repository 
 ```
-    git clone https://github.com/Miska347/FinaviaDiscordBot.git
+git clone https://github.com/Miska347/finavia-discord-bot.git
 ```
 - Create a Discord bot in Discord Developer Portal 
     - Enable all Priviledged Gateway Intents
@@ -37,17 +37,17 @@ Uses Finavia Public Flights, V0 API
 
 - Install all the requirements with command:
 ```
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 - Run the bot with command:
 ```
-    python3 main.py
+python3 main.py
 ```
 
 ### Run in Docker:
 ```
-    docker build -t finavia-discord-bot .
+docker build -t finavia-discord-bot .
 ```
 ```
-    docker run -d --restart unless-stopped --name finavia-discord-bot finavia-discord-bot:latest
+docker run -d --restart unless-stopped --name finavia-discord-bot finavia-discord-bot:latest
 ```
