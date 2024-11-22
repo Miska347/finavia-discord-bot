@@ -1,0 +1,6 @@
+services:
+  finavia-discord-bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    container_name: finavia-discord-bot
